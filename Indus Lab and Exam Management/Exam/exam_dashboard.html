@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <div class="container">
+        <ul class="nav justify-content-center">
+            <img src="http://localhost/Om%20sem-6/SDP-II/Lab/Faculty/logo.png" alt="Indus University" height="90px" width="150px">
+           
+            <span class="nav-msg">Indus Institute of Information & Communication Technology</span>
+           
+            <li class="image-nav" id="imageDropdown" onclick="toggleImageDropdown()">
+                
+                <img src="http://localhost/Om%20sem-6/SDP-II/Lab/Faculty/avatar.jpg" alt="Image" height="82px" width="82px">
+                
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="#" onclick="signOut()">Sign Off</a>
+                </div>
+
+            </li> 
+        </ul>
+        <ul class="side-bar-exam">
+            <li class="side-data" id="manageComplain">
+                <a class="sub-menu" onclick="changeIframeSrc('Student/MSE_Registration.html')">MSE Theory Registration</a>
+            </li>
+            
+            <li class="side-data" id="manageComplain"> 
+                <a class="sub-menu" onclick="changeIframeSrc('Student/MSE_practical.html')">MSE Practical Registration</a>
+            </li>
+
+            <li class="side-data" id="manageComplain"> 
+                <a class="sub-menu" onclick="changeIframeSrc('Student/ESE_Theory.html')">ESE Theory Registration</a>
+            </li>
+
+            <li class="side-data" id="manageComplain"> 
+                <a class="sub-menu" onclick="changeIframeSrc('Student/ESE_Practical.html')">ESE Practical Registration</a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <script>
+        // Function to toggle image dropdown visibility
+        function toggleImageDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        }
+
+
+        // Function to change the src attribute of the iframe
+        function changeIframeSrc(src) {
+            var iframe = document.getElementById("iframeContainer");
+            iframe.src = src;
+        }
+
+        // Function to handle sign out
+        function signOut() {
+            if (confirm("Are you sure you want to sign out?")) {
+                window.location.href = "http://localhost/Om%20sem-6/SDP-II/Login/index.html"; // Relative URL path to sign-in page
+            }
+        }
+    </script>
+
+    <iframe name="iframeContainer" id="iframeContainer" src="Student/MSE_Registration.html" frameborder="1"></iframe>
+
+</body>
+</html>

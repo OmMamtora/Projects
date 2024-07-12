@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Facu_lab_login.css">
+</head>
+<body>
+    
+    <span class="msg_exam">Lab Section</span>
+    
+    <span class="itDep_msg">Welcome Faculty</span>
+    <div class="container">
+        <form method="POST" action="Facu_lab_login.php" onsubmit="return validateForm()" target="_blank">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username.."><br />
+                <span id="username-error" class="error-message"></span><br />
+                
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password.."><br />
+                <span id="password-error" class="error-message"></span><br /> 
+            </div>
+            <div class="submit">
+                <input type="submit" name="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Reset previous error messages
+            document.getElementById("username-error").innerText = "";
+            document.getElementById("password-error").innerText = "";
+
+            var isValid = true;
+
+            // Username validation
+            if (username.trim() === "") {
+                document.getElementById("username-error").innerText = "Please enter a username.";
+                isValid = false;
+            } else if (!username.includes("@gmail.com")) {
+                document.getElementById("username-error").innerText = "Username is not correct please check it..";
+                isValid = false;
+            }
+
+            // Password validation
+            if (password.trim() === "") {
+                document.getElementById("password-error").innerText = "Please enter a password.";
+                isValid = false;
+            } else if (password.length < 6 || password.length > 15) {
+                document.getElementById("password-error").innerText = "Password is not correct please check it..";
+                isValid = false;
+            }
+
+            return isValid; // Form submission allowed only if isValid is true
+        }
+    </script>
+</body>
+</html>

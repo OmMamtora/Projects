@@ -1,0 +1,58 @@
+form {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center; 
+    margin-bottom: 20px; /* Add space below the form */
+    height: auto;
+}
+
+label {
+    font-weight: bold; /* Make labels bold */
+}
+
+/* Select dropdown styling */
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 150px;
+    margin-right:350px
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px; /* Add padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Table styling */
+.software-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add space above the table */
+}
+
+.software-table th,
+.software-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.software-table th {
+    background-color: #504088;
+    color: #fff;
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}

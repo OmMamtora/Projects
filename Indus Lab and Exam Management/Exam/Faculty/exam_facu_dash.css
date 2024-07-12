@@ -1,0 +1,75 @@
+/* your_stylesheet.css */
+
+/* Container styles */
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Table styles */
+/* Add this CSS to your your_stylesheet.css file */
+
+/* Table styles */
+table {
+    width: 80%; /* Adjust the width of the table as needed */
+    margin: 20px auto; /* Center the table horizontally and add margin at the top and bottom */
+    border-collapse: collapse; /* Collapse border spacing */
+}
+
+table th,
+table td {
+    padding: 8px;
+    border: 1px solid #ddd; /* Add border to table cells */
+}
+
+table th {
+    background-color: #504088;
+    font-weight: bold;
+    text-align: left;
+    color:white;
+}
+
+/* Button styles */
+.data-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transition for background color and text color */
+}
+
+.data-button:hover {
+    background-color: #2980b9;
+}
+
+/* Add this CSS to your exam_facu_dash.css file */
+
+/* Adjust iframe container */
+#dataFrame {
+    width: 80%; /* Set the width of the iframe */
+    height: 500px; /* Set the height of the iframe */
+    margin: 20px auto; /* Center the iframe horizontally and add margin at the top and bottom */
+    display: block; /* Ensure the iframe is displayed as a block element */
+}
+
+.mse_theory-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mse_theory-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.mse_theory-table th {
+    border: 2px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #504088; 
+    color: white;
+}

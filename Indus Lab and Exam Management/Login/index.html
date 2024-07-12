@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="index.css">
+   <!-- <script src="index.js"></script> -->
+</head>
+<body>
+    <ul class="sidebar">
+        <span class="side-span">Sign in</span>
+        <li class="side-item" id="itDepartmentItem">
+            <a class="sidebar-link" onclick="toggleDropdown('it')">IT Department</a>
+            <div class="dropdown-content" id="itDropdownContent">
+                <a onclick="selectOption('IT_exam_login.html', this)">Exam</a>
+                <a onclick="selectOption('IT_lab_login.html', this)">Lab</a>
+            </div>
+        </li>
+        <li class="side-item" id="facultyItem">
+            <a class="sidebar-link" onclick="toggleDropdown('faculty')">Faculty</a>
+            <div class="dropdown-content" id="facultyDropdownContent">
+                <a onclick="selectOption('Facu_exam_login.html', this)">Exam</a>
+                <a onclick="selectOption('Facu_lab_login.html', this)">Lab</a>
+            </div>
+        </li>
+        <li class="side-item" id="studentItem">
+            <a class="sidebar-link" onclick="openStudentLogin()">Student</a> 
+        </li>
+
+    </ul>
+   
+    
+    
+    <script>
+
+    // Initialize dropdown state
+    var isDropdownOpen = { itdep: false, faculty: false,student:false };
+
+    // Function to toggle dropdown visibility
+    function toggleDropdown(item) {
+        var dropdownContent = document.getElementById(item + "DropdownContent");
+        isDropdownOpen[item] = !isDropdownOpen[item]; // Toggle dropdown state
+        
+        if (isDropdownOpen[item]) {
+            dropdownContent.style.display = "block";
+        } else {
+            dropdownContent.style.display = "none";
+        }
+    }
+
+    // Function to handle option selection
+    
+    function selectOption(url, option) {
+        if (confirm("Are you sure you want to select this option: " + option.innerText)) {
+            document.getElementById("iframeContainer").src = url;
+        } else {
+            console.log("Redirecting to login page...");
+            window.location.href = "https://localhost/Om%20sem-6/SDP-II/Login/index.html";
+        }
+        
+        // Close the dropdown after selection
+        var item = option.closest(".side-item").id.replace("Item", "");
+        isDropdownOpen[item] = false;
+        var dropdownContent = option.parentElement;
+        dropdownContent.style.display = "none";
+    }
+
+
+        // Function to close dropdown when clicking outside
+        document.addEventListener("click", function(event) {
+            var itDropdownContent = document.getElementById("itDropdownContent");
+            var facultyDropdownContent = document.getElementById("facultyDropdownContent");
+
+            if (!event.target.closest("#itDepartmentItem") && !event.target.closest("#itDropdownContent")) {
+                isDropdownOpen.itdep = false;
+                itDropdownContent.style.display = "none";
+            }
+
+            if (!event.target.closest("#facultyItem") && !event.target.closest("#facultyDropdownContent")) {
+                isDropdownOpen.faculty = false;
+                facultyDropdownContent.style.display = "none";
+            }
+        });
+
+        function openStudentLogin() {
+            document.getElementById("iframeContainer").src = "student_exam_login.html";
+        }
+
+    </script>
+    
+    <iframe name="iframeContainer" id="iframeContainer" src="sidebar.html" frameborder="1"></iframe>
+</body>
+</html>

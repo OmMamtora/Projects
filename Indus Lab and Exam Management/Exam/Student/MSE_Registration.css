@@ -1,0 +1,95 @@
+.container {
+  margin-left: 150px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-right: 175px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+.msg {
+  display: block; /* Ensure it's displayed as a block element */
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the text bold */
+  margin-bottom: 20px; /* Add some space below the text */
+  color: #333; /* Set the text color */
+}
+
+input[type="text"], select {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+select {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 72px;
+  margin-left: 150px;
+  width: 42%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+  padding-right: 25px;
+}
+
+.add_btn:hover,
+.payment_btn:hover {
+  animation: blink 0.5s none;
+  color: black;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 150px;
+}
+
+.add_btn,
+.payment_btn {
+  margin-right: 20px;
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  margin:15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+
+
+/* Hover styles for primary buttons */
+.add_btn button:hover,
+.payment_btn button:hover {
+  background-color: #0056b3;
+}
+
+/* Hover styles for secondary button */
+.cancel_btn button:hover {
+  background-color: white;
+  border: 1px solid blue;
+  color: blue;
+}

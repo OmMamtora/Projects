@@ -1,0 +1,48 @@
+.software-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.software-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.software-table th {
+    border: 2px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #504088; 
+    color: white;
+}
+
+
+input[type="submit"]{
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* software_complain.css */
+
+.message {
+    color: green; /* Color for success message */
+    font-weight: bold;
+    margin-bottom: 10px; /* Add some space below the message */
+}
+
+.error-message {
+    color: red; /* Color for error message */
+    font-weight: bold;
+    margin-bottom: 10px; /* Add some space below the message */
+}

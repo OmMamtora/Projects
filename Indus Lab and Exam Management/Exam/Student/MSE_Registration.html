@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Accordion</title>
+<link rel="stylesheet" href="Registration.css">
+</head>
+<body>
+
+<form id="mseFormTheo" method="post">
+  <div class="container">
+    <span class="msg">MSE Theory Registration</span>
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" placeholder="Enter Full Name:">
+
+    <label for="email">Email: </label>
+    <input type="text" id="email" name="email" placeholder="Enter your Indus Email_ID..">
+
+    <label for="enrollment">Enrollment No: </label>
+    <input type="text" id="enrollment" name="enrollment" placeholder="Enter your Enrollment No..">
+
+    <label for="branch">Branch: </label>
+    <input type="text" id="branch" name="branch" placeholder="Enter your Branch:">  
+  </div>
+
+  <select id="mainDropdown" name="semester" id="semester" onchange="populateAccordionDropdown()">
+    <option value="" disabled selected>Select Semester</option>
+    <option value="sem 1">Sem 1</option>
+    <option value="sem 2">Sem 2</option>
+    <option value="sem 3">Sem 3</option>
+    <option value="sem 4">Sem 4</option>
+    <option value="sem 5">Sem 5</option>
+    <option value="sem 6">Sem 6</option>
+  </select>
+
+  <select id="accordionDropdown" name="subject" id="subject">
+    <option value="" disabled selected>Select Subject</option>
+  </select>
+
+  <div class="buttons">
+    <div class="add_btn">
+      <button type="submit" id="addButton" name="add_data" formaction="MSE_theroy_data.php"> + Add</button>
+    </div>
+  
+    <div class="payment_btn">
+      <button type="submit" name="pay_now" id="pay_now" formaction="Payment.php">Pay Now</button>
+    </div>
+  
+    <div class="cancel_btn">
+      <button type="button" onclick="resetForm()">Cancel</button>
+    </div>
+  </div>
+</form>
+
+<script>
+  function populateAccordionDropdown() {
+    var mainDropdown = document.getElementById('mainDropdown');
+    var accordionDropdown = document.getElementById('accordionDropdown');
+    var selectedValue = mainDropdown.value;
+    accordionDropdown.innerHTML = ''; // Clear previous options
+    
+    if (selectedValue === 'sem 1') {
+      accordionDropdown.add(new Option('CO', 'Computer Organisation'));
+      accordionDropdown.add(new Option('FODBMS', 'Fundament of database'));
+      accordionDropdown.add(new Option('LBT', 'Logic Building'));
+      accordionDropdown.add(new Option('MAGT', 'Matrix'));
+      accordionDropdown.add(new Option('CPS', 'Communication and presentation skill'));
+      accordionDropdown.add(new Option('OE', 'Open Elective'));
+    } 
+    else if (selectedValue === 'sem 2') {
+      accordionDropdown.add(new Option('ADBMS', 'Advance Database management system'));
+      accordionDropdown.add(new Option('DM', 'Discrete Mathematics'));
+      accordionDropdown.add(new Option('POP', 'Principles of Programming'));
+      accordionDropdown.add(new Option('MP', 'Microprocessor'));
+      accordionDropdown.add(new Option('PCS', 'Personal Computer Software'));
+    }
+    else if (selectedValue === 'sem 3') {
+      accordionDropdown.add(new Option('OOP', 'Object Oriented Programming Language C++'));
+      accordionDropdown.add(new Option('SCP(OE)', 'Smart City Planning'));
+      accordionDropdown.add(new Option('IWT', 'Introduction to Web Technology'));
+      accordionDropdown.add(new Option('E-COM', 'E-Commerce'));
+    }
+    else if (selectedValue === 'sem 4') {
+      accordionDropdown.add(new Option('AOOP', 'Advance Object Oriented Programming'));
+      accordionDropdown.add(new Option('FON', 'Fundamentals of Network'));
+      accordionDropdown.add(new Option('SOODAM', 'SOODAM'));
+      accordionDropdown.add(new Option('OR', 'Opertions Research'));
+      accordionDropdown.add(new Option('DS', 'Data Structure'));
+    }
+    else if (selectedValue === 'sem 5') {
+      accordionDropdown.add(new Option('SDP-I', 'Software Project Development -I'));
+      accordionDropdown.add(new Option('PHP', 'Open Source Programming Language'));
+      accordionDropdown.add(new Option('SSP', 'Shell Scripting'));
+      accordionDropdown.add(new Option('SE', 'Software Engineering'));
+      accordionDropdown.add(new Option('BI', 'Business Intelligence'));
+    }
+    else if (selectedValue === 'sem 6') {
+      accordionDropdown.add(new Option('SDP-II', 'Software Project Development -II'));
+      accordionDropdown.add(new Option('AAD', 'Android Application Development'));
+      accordionDropdown.add(new Option('ASP.NET', 'ASP.NET'));
+      accordionDropdown.add(new Option('Python', 'Python Programming'));
+    }
+
+    
+  }
+
+  function addData() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var enrollment = document.getElementById('enrollment').value;
+    var branch = document.getElementById('branch').value;
+    var semester = document.getElementById('mainDropdown').value;
+    var subject = document.getElementById('accordionDropdown').value;
+    
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                console.log(xhr.responseText); // Log response from PHP file
+                // You can display a success message here if you want
+                // Clear form fields after successful submission
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('enrollment').value = '';
+                document.getElementById('branch').value = '';
+                document.getElementById('mainDropdown').selectedIndex = 0; // Reset dropdown to default
+                document.getElementById('accordionDropdown').innerHTML = '<option value="" disabled selected>Select Subject</option>'; // Clear subject dropdown
+            } else {
+                console.error(xhr.statusText); // Log error status
+            }
+        }
+    };
+    xhr.open('POST', 'MSE_theory_data.php', true); // Specify PHP file to handle data insertion
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send('name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&enrollment=' + encodeURIComponent(enrollment) + '&branch=' + encodeURIComponent(branch) + '&semester=' + encodeURIComponent(semester) + '&subject=' + encodeURIComponent(subject));
+}
+
+
+  function resetForm() {
+    document.getElementById("mseFormTheo").reset();
+  }
+</script>
+
+</body>
+</html>

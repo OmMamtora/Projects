@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Detail Dashboard</title>
+    <link rel="stylesheet" href="exam_facu_dash.css">
+    <!-- Add any necessary CSS or external stylesheets here -->
+</head>
+<body>
+    <div class="container">
+        <!-- Buttons to select data categories -->
+        <button class="data-button" onclick="loadData('MSE Theory')">MSE Theory</button>
+        <button class="data-button" onclick="loadData('ESE Theory')">ESE Theory</button>
+        <button class="data-button" onclick="loadData('MSE Practical')">MSE Practical</button>
+        <button class="data-button" onclick="loadData('ESE Practical')">ESE Practical</button>
+    </div>
+
+    <!-- iframe to display fetched data -->
+    <iframe id="dataFrame" name="dataFrame" frameborder="0"></iframe>
+
+    <script>
+        // Function to load data based on selected category
+        function loadData(category) {
+            var iframe = document.getElementById("dataFrame");
+            // Set the source of the iframe dynamically based on the selected category
+            switch (category) {
+                case 'MSE Theory':
+                    iframe.src = 'MSE_select.php?category=MSE_Theory';
+                    break;
+                case 'ESE Theory':
+                    iframe.src = 'ESE_Theory_select.php?category=ESE_Theory';
+                    break;
+                case 'MSE Practical':
+                    iframe.src = 'MSE_Practical_select.php?category=MSE_Practical';
+                    break;
+                case 'ESE Practical':
+                    iframe.src = 'ESE_Practical_select.php?category=ESE_Practical';
+                    break;
+                default:
+                    console.error('Invalid category');
+            }
+        }
+    </script>
+</body>
+</html>

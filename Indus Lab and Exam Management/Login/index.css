@@ -1,0 +1,80 @@
+/* Reset default margin and padding */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    margin-top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #25cbcb;
+    padding: 20px;
+    color: #fff;
+    list-style-type: none;
+}
+
+/* Sign in text */
+.side-span {
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Sidebar item styles */
+.side-item {
+    margin-top: 40px;
+}
+
+/* Sidebar link styles */
+.sidebar-link {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Hover effect for sidebar links */
+.sidebar-link:hover {
+    border-color: #fff;
+}
+
+/* Style for iframe */
+#iframeContainer {
+    margin-left: 450px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 65%; /* Adjust width as needed */
+    height: 100%; /* Make iframe full height of the viewport */
+    border: none; /* Remove iframe border */
+    z-index: 1; /* Ensure iframe appears above other elements */
+}
+
+.dropdown-content {
+    display: none;
+    /* Your existing styles */
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #135252; /* Change background color on hover */
+}
