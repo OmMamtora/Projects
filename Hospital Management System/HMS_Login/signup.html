@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title> Welcome to signup page..</title>
+   <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <form action="db_signup.php" method="post">
+        <h2>Registration</h2>
+        <div class="container">
+            <div class="pre">
+                <lable>Personal Details</lable>
+            </div>
+            <div class="name">
+                <input type="text" id="firstname" name="firstname" placeholder="FirstName">
+                <input type="text" id="lastname" name="lastname" placeholder="LastName">
+            </div>
+            <div class="email_phone">
+                <input type="email" id="email" name="email" placeholder="Eamil">
+                <input type="tel" id="number" name="number" max="10"placeholder="Phone Number">
+            </div>            
+            </div>
+            <div class="dob_gender">
+                <input type="date" id="dob" name="dob" placeholder="DOB">
+                <select name="gender">
+                    <option>Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>  
+            </div>
+           <div class="status">
+                <select name="m_status">
+                    <option> Maritial Status </option>
+                    <option> Yes </option>
+                    <option> No </option>
+                </select>
+           </div>
+           <div class="type_reg">
+            <select name="type_of_registration">
+                <option> Admin </option>
+                <option> Patient </option>
+                <option> Receptionist </option>
+            </select>
+       </div>
+            <div class="add">
+                <textarea cols="25" rows="3" id="address" name="address" placeholder=" Address"></textarea>
+            </div>
+            <div class="pre">
+                <lable>Emergency Contact Details</lable>
+            </div>
+            <div class="name">
+                <input type="txt" id="emefirstname" name="emgfirstname" placeholder="FirstName">
+                <input type="txt" id="emelastname" name="emglastname" placeholder="LastName">
+            </div>
+            <div class="email_phone">
+                <input type="email" id="emeemail" name="emgemail" placeholder="Eamil">
+                <input type="tel" id="emenumber" name="emgnumber" max="10" placeholder="Phone Number">
+             </div>   
+            <div class="submit">
+                <input type="Submit" id="submit" name="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

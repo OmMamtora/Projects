@@ -1,0 +1,36 @@
+/* Set the background image for the body */
+body {
+    background-image: url("aboutus.avif");
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Center the content on the right side */
+.about-us-content {
+    max-width: 800px;
+    margin: 0; /* Remove any margin */
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    position: absolute;
+    top: 100;
+    right: 0;
+    height: 75%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Align content to the right */
+}
+
+/* Style headings */
+.about-us-content h1, .about-us-content h2 {
+    color: #333;
+}
+
+/* Style paragraphs */
+.about-us-content p {
+    line-height: 1.6;
+}

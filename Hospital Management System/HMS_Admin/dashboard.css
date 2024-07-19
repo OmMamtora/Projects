@@ -1,0 +1,72 @@
+/* Styling for the container */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: space-around; /* Adjust as needed */
+    background-color: white; /* Set background color to white */
+    padding: 20px;
+}
+
+/* Styling for the pro boxes (upper three grids) */
+.pro {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 250px; /* Adjust the width and margin as needed */
+    margin: 0; /* Adjust the margin as needed */
+    display: inline-block; 
+}
+
+
+.pro img {
+    margin-bottom: 10px;
+}
+
+.pro h2 {
+    font-size: 24px;
+    color: black; /* Adjust text color */
+    margin: 2px;
+}
+
+.grid-container {
+    display: grid; 
+    grid: auto / auto auto auto auto; 
+    grid-gap: 10px; 
+    padding: 10px; 
+}
+
+
+.lower-row {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for lower row */
+}
+
+
+.pro h5 {
+    font-size: 16px;
+    padding: 5px;
+    color: #777;
+    cursor: pointer;
+    transition: color 0.1s ease;
+    margin: 5px; /* Add transition for color change */
+}
+
+
+.pro h5:hover {
+    color: black;
+    background-color: blue;
+}
+
+.pro a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #777; /* Default text color for links */
+    transition: color 0.1s ease; /* Add transition for color change */
+}
+
+.pro a:hover {
+    color: black; /* Change text color on hover */
+    background-color: blue; /* Add background color on hover */
+}

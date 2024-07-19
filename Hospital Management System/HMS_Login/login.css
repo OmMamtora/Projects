@@ -1,0 +1,74 @@
+/* Reset some default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif; /* Set a default font for the entire page */
+    background-image: url("index_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Fixed background for better effect */
+    
+}
+
+/* Center the form horizontally and vertically */
+form {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    
+    
+}
+
+/* Style for the container that holds the form */
+/* Style for the container that holds the form with opacity */
+.container {
+    padding: 25px;
+    border-radius: 4px;
+    width: 450px;
+    height: 350px;
+    margin: 0 auto;
+    margin-left: 450px;
+    background-color: rgba(255, 255, 255, 0.5); /* Set opacity by modifying the alpha channel (0.8 for 80% opacity) */
+    
+}
+
+
+/* Style for labels */
+label {
+    font-size: 15px;
+    margin: 0; /* Added margin to control vertical spacing */
+    padding: 10px;
+    color: black; /* Added padding */
+}
+
+/* Style for text inputs */
+input[type="text"],
+input[type="password"],
+select {
+    margin: 5px 0;
+    padding: 10px;
+    width: 50%;
+    font-family: Verdana, sans-serif;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    width: 50%;
+    padding: 15px;
+    font-size: 15px;
+    color: black; /* Text color */
+    cursor: pointer; /* Change cursor on hover */
+    margin: 10px 0; /* Center the submit button vertically */
+}
+
+/* Style for the "Don't have an account?" link */
+.newRegistration {
+    font-size: 15px;
+    margin: 10px 0;
+    padding: 5px; /* Added padding */
+}

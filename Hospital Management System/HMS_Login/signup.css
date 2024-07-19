@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130%;
+    margin: 0;
+    background-color: #f0f0f0;
+    width: 550px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+form{
+    border-radius: 4px;
+    display: block;
+   background-color: black;
+   opacity: 0.8;
+   width: 550px;
+   height: 100%;
+
+}
+.container{
+  border: 1px splid blue;
+}
+.pre{
+    width: 95%;
+    margin: 9px;
+    border:1px solid gray;
+    border-radius: 15px;
+    padding:4px;
+    font-family: Helvetica;
+    font-size: 18px;
+    color: rgb(121, 200, 227);
+    text-align: center;
+    justify-content: space-between;
+}
+.name,.dob_gender{
+    margin: 10px;
+    padding: 4px;
+    color: black; 
+    opacity: 0.8;   
+}
+
+.dob_gender select,
+.dob_gender input[id="dob"]{
+    width: 49%;
+    padding: 10px;
+    margin: 1px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.status select,
+.type_reg select{
+    width: 49%;
+    padding: 10px;
+    margin: 13px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.add textarea[id="address"] {
+    margin :13px;
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    background-color:rgba(255, 255, 255, 0);
+    border-bottom: 1px solid;
+    font-weight: 300;
+    color: #ebe3e3;
+    font-size: 15px;
+}
+
+
+.email_phone{
+    margin: 10px;
+    padding: 4px;
+    color: black; 
+    opacity: 0.8;
+}
+.name input[id="firstname"],
+.name input[id="lastname"],
+.name input[id="emefirstname"],
+.name input[id="emelastname"]{
+    width: 49%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none; 
+    border-radius: 0;
+    background-color: rgba(255,255,255,0);
+    border-bottom: 1px solid; 
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+
+
+.email_phone input[id="email"],
+.email_phone input[id="number"],
+.email_phone input[id="emeemail"],
+.email_phone input[id="emenumber"]{
+    width: 49%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 0;
+    background-color: rgba(255,255,255,0);
+    border-bottom: 1px solid; 
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.submit input[type="submit"] {
+    margin : 13px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    width: 250px;
+    padding: 10px;
+    font-family: Verdana;
+    font-size: 15px;
+    color:black;
+    display: flex;
+    align-items: center;
+}
+

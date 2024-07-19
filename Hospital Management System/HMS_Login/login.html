@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>LOGIN PAGE</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <iframe src="navigation.html" name="navigation" width="100%" height="20%" style="border: none;"></iframe>
+    <form action="login.php" method="post">
+        <div class="container">
+            <div class="user">
+                <label>Username</label>
+            </div>
+            <div class="length">
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="password">
+                <label>Password</label>
+            </div>
+            <div class="length">
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="type">
+                <label>User Type</label>
+                <select id="type" name="type">
+                    <option value="select">Select</option>
+                    <option value="admin">Admin</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="patient">Patient</option>
+                    <option value="receptionist">Receptionist</option>
+                </select>
+            </div>
+            <div class="newRegistration">
+                Don't have an account? <a href="signup.html">Sign up</a>
+            </div>
+            <div class="submit">
+                <input type="submit" name="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

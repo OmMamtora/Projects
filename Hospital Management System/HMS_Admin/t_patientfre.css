@@ -1,0 +1,74 @@
+/* Resetting default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    width: 100%;
+}
+
+/* Styles for the container */
+.container {
+    display: flex;
+    background-color: white; /* Set background color to white */
+    padding: 20px;
+    margin-top: 90px;
+    margin-left: 70px;
+    width: 90%;
+    justify-content: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px; 
+}
+
+/* Styles for the profile section */
+.pro, .pro_ap {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 250px; /* Adjust the width and margin as needed */
+    margin: 15px; /* Adjust the margin as needed */
+    display: inline-block; 
+}
+
+/* Styles for profile image */
+.pro img, .pro_ap img {
+    border-radius: 2px;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+}
+
+/* Common styles for headings */
+.pro h2, .pro_ap h2 {
+    padding: 7px;
+    color: black;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin: 0;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Common styles for subheadings */
+.pro h5, .pro_ap h5 {
+    padding: 5px;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for subheadings */
+.pro h5:hover, .pro_ap h5:hover {
+    background-color: #2980b9;
+}

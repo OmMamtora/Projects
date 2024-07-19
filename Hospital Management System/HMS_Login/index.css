@@ -1,0 +1,33 @@
+/* Add a background image to the background-container */
+/* CSS for the body */
+body {
+    background-image: url("index_background.jpg"); /* Replace with the path to your background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    margin: 0;
+    height: 100vh;
+    position: relative; /* Required for positioning children */
+    border: none;
+}
+
+/* CSS for the second iframe (content) */
+iframe[name="content"] {
+    margin-top: 0%; /* Set the top margin to match the height of the first iframe */
+    border: none;
+}
+
+/*h1 {
+    font-size: 36px;
+    position: absolute; 
+    top: 80px;
+    left: 590px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 10px; 
+}*/
