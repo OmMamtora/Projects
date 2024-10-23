@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Room Allocation for Patient</title>
+    <link rel="stylesheet" href="room_allocation.css">
+</head>
+<body>
+    <div class="allocation_form">
+        <form method="post" action="room_allocate.php">
+            <h2>Room Allocation for Patient</h2>
+            <label>Patient Name:</label>
+            <input type="text" id="patient_name" name="patient_name" required><br><br>
+
+            <label>Patient ID:</label>
+            <input type="text" id="patient_id" name="patient_id" required><br><br>
+
+            <label>Room Type:</label>
+            <select id="room_type" name="room_type" required>
+                <option value="" disabled selected>Select</option>
+                <option value="General ">General</option> 
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="Premium">Premium</option> 
+            </select><br><br>
+
+            <label>Floor Number:</label>
+            <select id="room_floor" name="room_floor" required>
+                <option value="" disabled selected>Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            
+
+            <input type="submit" value="Allocate Room">
+        </form>
+    </div>
+</body>
+</html>

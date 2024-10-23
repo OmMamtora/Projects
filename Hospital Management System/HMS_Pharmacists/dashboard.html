@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medicine Category Management</title>
+    <link rel="stylesheet" href="medicine_category.css">
+</head>
+<body>
+    <div class="category-form">
+        <h2>Manage Medicine Category</h2>
+        <form action="manage_category.php" method="post">
+            <label for="category_name">Category Name</label>
+            <input type="text" id="category_name" name="category_name" placeholder="Enter Category Name" required>
+
+            <input type="submit" name="submit" value="Add Category">
+        </form>
+    </div>
+
+    <div class="category-list">
+        <h2>Medicine Category List</h2>
+        <ul>
+            <li>Category 1</li>
+            <li>Category 2</li>
+            <li>Category 3</li>
+            <!-- Add more categories here dynamically using PHP -->
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Detail</title>
+    <link rel="stylesheet" href="doctordetail.css">
+</head>
+<body>
+    <div class="doctor-detail">
+        <h2>Doctor Detail</h2>
+
+        <?php
+        if (isset($row)) {
+        ?>
+            <form>
+                <label>Name: </label>
+                <input type="text" name="d_name" value="<?php echo $row['d_name']; ?>" disabled><br>
+
+                <label>Email: </label>
+                <input type="text" name="email" value="<?php echo $row['email']; ?>" disabled><br>
+
+                <label>Joining Date: </label>
+                <input type="text" name="joining_date" value="<?php echo $row['joining_date']; ?>" disabled><br>
+
+                <label>Mobile No: </label>
+                <input type="text" name="mobile_no" value="<?php echo $row['mobile_no']; ?>" disabled><br>
+
+                <label>Specialty: </label>
+                <input type="text" name="specialty" value="<?php echo $row['specialty']; ?>" disabled><br>
+
+                <label>Username: </label>
+                <input type="text" name="username" value="<?php echo $row['username']; ?>" disabled><br>
+
+                <label>Password: </label>
+                <input type="text" name="password" value="<?php echo $row['password']; ?>" disabled><br>
+
+                <label>Hospital Name: </label>
+                <input type="text" name="hospital_name" value="<?php echo $row['hospital_name']; ?>" disabled><br>
+            </form>
+        <?php
+        }
+        ?>
+    </div>
+</body>
+</html>
+
+
+
+

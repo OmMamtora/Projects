@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 95%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 150px;
+}
+
+.grid-container {
+    display: grid; 
+    grid: auto auto / auto auto auto auto; 
+    grid-gap: 10px; 
+    padding: 10px; 
+}
+
+.lower-row {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for lower row */
+}
+
+.patient {
+    border: 1px solid blue;
+  padding: 15PX;
+  text-align: center;
+  width: 250px;
+  margin: 15px;
+}
+
+.patient img {
+    border-radius: 50%;
+}
+
+.patient a {
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+.patient p{
+    padding: 10px;
+    margin: 5px;
+    
+}
+
+.patient p:hover {
+    background-color: #2980b9;
+}

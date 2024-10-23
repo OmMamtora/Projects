@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Hospital Appointment Page</title>
+    <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="navigation_bar">
+        <!-- Your appointment form starts here -->
+        <form method="post" action="bookappointment.php">
+            <h1>Appointment Booking</h1>
+            
+            <label>Patient Name:</label>
+            <input type="text" id="patient-name" name="patientName" required>
+
+            <label>Patient Email:</label>
+            <input type="text" id="patient_email" name="patient_email" required>
+            
+            <label>Select Doctor:</label>
+            <select id="doctor" name="doctor" required>
+                <option value="Dr. OM"> Dr. OM</option>
+                <option value="Dr. Kashish">Dr. Kashish</option>
+                <option value="Dr. Vishal">Dr. Vishal</option>
+            </select>
+            
+            <label>Select Date:</label>
+            <input type="date" id="appointment_date" name="appointment_date" required>
+            
+            <label>Select Time:</label>
+            <select id="slot_time" name="slot_time" required>
+                <option value="10:30 to 12:00">10:30 to 12:00</option>
+                <option value="2:00 to 4:00">2:00 to 4:00</option>
+                <option value="6:00 to 8:00">6:00 to 8:00</option>
+            </select>
+            
+            <input type="submit" name="submit" value="Submit">
+        </form>
+        <!-- Your appointment form ends here -->
+    </div>
+</body>
+</html>

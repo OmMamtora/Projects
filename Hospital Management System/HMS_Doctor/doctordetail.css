@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+.doctor-detail {
+    width: 50%;
+    margin: 0 auto;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 94%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.doctor-info {
+    width: 350px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Apply styling to the link inside the edit button */
+.edit-button a {
+    color: #007bff; /* Set the link color */
+    text-decoration: none; /* Remove underlines from the link */
+    display: inline-block; /* Make the link display as a block */
+    background-color: #f7f7f7; /* Set the background color */
+    padding: 5px 10px; /* Adjust padding for the link */
+    border: 1px solid #007bff; /* Set a border for the link */
+    border-radius: 4px; /* Add rounded corners to the link */
+}
+
+/* Apply hover effect for the link */
+.edit-button a:hover {
+    background-color: #007bff; /* Change the background color on hover */
+    color: #f7f7f7; /* Change the text color on hover */
+}
+
+/* Center the content */
+.doctor-detail {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    flex-direction: column; /* Align content in a column */
+}
+

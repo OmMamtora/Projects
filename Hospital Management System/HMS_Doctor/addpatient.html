@@ -1,0 +1,57 @@
+<html>
+<head>
+    <link rel="stylesheet" href="addpatient.css">
+</head>
+<body>
+    <form method="post" action="addpatient.php">
+        <h2>Patient Registration</h2>
+        <div class="container">
+            <div class="name">
+                <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+            </div>
+            
+            <div class="email">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            
+            <div class="mobile">
+                <input type="tel" id="number" name="number" placeholder="Phone Number" pattern="[0-9]{10}" required>
+            </div>
+            
+            <div class="gender">
+                <select name="gender" id="gender" required>
+                    <option value="" disabled selected>Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            
+            <div class="age">
+                <input type="number" name="age" id="age" placeholder="Age" required>
+            </div>
+
+            <div class="add">
+                <textarea cols="25" rows="3" id="address" name="address" placeholder="Address" required></textarea>
+            </div>
+            <div class="username">
+                <input type="text" id="username" name="username" placeholder="Enter Username" required>
+            </div>
+            <div class="password">
+                <input type="password" id="password" name="password"placeholder="Enter password" required>
+            </div>
+            
+            <div class="diseases">
+                <input type="text" id="diseases" name="diseases" placeholder="Enter Patient Diseases" required>
+            </div>
+            
+            <div class="history">
+                <input type="text" name="history" id="history" placeholder="Medical History" required>
+            </div>
+            
+            <div class="submit">
+                <input type="submit" id="submit" name="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

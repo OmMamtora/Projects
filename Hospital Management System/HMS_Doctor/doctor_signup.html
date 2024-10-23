@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Signup</title>
+    <link rel="stylesheet" href="doctor_signup.css"> 
+</head>
+<body>
+    <div class="container">
+        <h2>Doctor Signup</h2>
+        <form method="post" action="process_doctor_signup.php">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" pattern="[A-Za-z ]+" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Joining Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Mobile No.:</label>
+                <input type="tel" id="tel" name="tel" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+                <label for="specialty">Specialty:</label>
+                <select id="specialty" name="specialty" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="Heart">Heart</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Neuroradiology">Neuroradiology</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="hospital">Hospital Name:</label>
+                <input type="text" id="hospital" name="hospital" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="submit" value="Sign Up">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

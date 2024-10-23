@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Medicine</title>
+    <link rel="stylesheet" href="medicine.css">
+</head>
+<body>
+    <div class="medicine-form">
+        <h2>Manage Medicine</h2>
+        <form action="manage_medicine.php" method="post">
+            <label for="medicine_name">Medicine Name</label>
+            <input type="text" id="medicine_name" name="medicine_name" placeholder="Enter Medicine Name" required>
+
+            <label for="manufacturer">Manufacturer</label>
+            <input type="text" id="manufacturer" name="manufacturer" placeholder="Enter Manufacturer" required>
+
+            <label for="expiry_date">Expiry Date</label>
+            <input type="date" id="expiry_date" name="expiry_date" required>
+
+            <label for="stock">Stock</label>
+            <input type="number" id="stock" name="stock" placeholder="Enter Stock" required>
+
+            <label for="price">Price</label>
+            <input type="number" id="price" name="price" placeholder="Enter Price" required>
+
+            <input type="submit" name="submit" value="Add Medicine">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* Reset some default styles for the body */
+body {
+    margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+/* Styling for the container that holds the heading */
+.container {
+    background-color: #5016f2;
+    box-shadow: 0px 0px 10px;
+    padding: 20px;
+    width: 96.6%;
+    text-align: left;
+}
+
+/* Styling for the heading inside the container */
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Styling for the sidebar */
+.aside_doctor {
+    position: absolute;
+  width: 210px;
+  height: 83%;
+  background-color: #8173dd;
+  color: white;
+}
+
+/* Styling for the main content area */
+.detail_dash {
+    width: 81.5%;
+    height: 100%;
+    padding: 5px;
+    display: block;
+    margin: 0;
+}
+
+/* Styling for buttons and links in the main content area */
+.detail_dash ul[name='ul_detail']{
+    margin: 0;
+    width: 90.9%;
+    padding: 19px;
+    display: block;
+    background-color: #8173dd;
+    color: white;
+    font-weight: bold;
+    border: none;
+    text-align: left;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.detail_dash a[name='detail_link'] {
+    margin: 0;
+    padding: 19px;
+    display: block;
+    background-color: #8173dd;
+    color: white;
+    font-weight: bold;
+    border: none;
+    text-align: left;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons and links in the main content area */
+.detail_dash input[type='submit']:hover,
+.detail_dash a[name='detail_link']:hover {
+    background-color: #1e1b1b;
+}
+
+/* Styling for the iframe */
+#iframeContainer {
+    background-color: white;
+    padding-top: 0;
+   
+    padding-left: 0;
+    border: none;
+    margin-left: 210px;
+    height: 510px;
+}
