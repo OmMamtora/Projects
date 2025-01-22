@@ -1,0 +1,244 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+/* Styling for the messages */
+.messages {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* General styling for messages container */
+.messages {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling for each message */
+.messages li {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    border-left: 5px solid transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Success message */
+.messages .success {
+    background-color: #d4edda;
+    color: #155724;
+    border-left-color: #28a745;
+}
+
+/* Error message */
+.messages .error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left-color: #dc3545;
+}
+
+/* Information message */
+.messages .info {
+    background-color: #cce5ff;
+    color: #004085;
+    border-left-color: #17a2b8;
+}
+
+/* Warning message */
+.messages .warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left-color: #ffc107;
+}
+
+/* Styling for icons or close button inside the message (if applicable) */
+.messages .icon {
+    margin-right: 10px;
+}
+
+/* Optional: Adding a close button to dismiss the message */
+.messages .close-btn {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    color: inherit;
+}
+
+.messages .close-btn:hover {
+    color: #007bff;
+}
+
+/* Hover effect for messages */
+.messages li:hover {
+    background-color: #f1f3f5;
+}
+
+/* Additional small responsive fixes for smaller screens */
+@media screen and (max-width: 600px) {
+    .messages {
+        padding: 10px;
+        margin: 10px;
+    }
+    .messages li {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+/* Header Section */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #4caf50;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.info a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.info a img:hover {
+    transform: scale(1.2);
+}
+
+/* Task Section */
+.task-to-do {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4caf50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inp {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.inp:focus {
+    border-color: #4caf50;
+}
+
+.submit-button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #388e3c;
+}
+
+/* Todo Items */
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: box-shadow 0.3s;
+}
+
+.todo:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo p {
+    margin: 0;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.edit {
+    display: flex;
+    gap: 10px;
+}
+
+.edit a img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.edit a img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .task-to-do {
+        padding: 15px;
+    }
+
+    .heading {
+        font-size: 1.3rem;
+    }
+
+    .inp, .submit-button {
+        font-size: 0.9rem;
+    }
+}

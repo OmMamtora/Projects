@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/todo.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:wght@400;508;700&display=swap">
+</head>
+<body>
+    <div class="info">
+        <h1>Hello {{ user }}</h1>
+    </div>
+    <div class="task-to-do">
+        <div class="heading">Get Things Done?</div>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" class="inp" name="title" placeholder="Update Your Task.." value="{{ todo.title }}" required>
+            <input type="submit" class="submit-button" value="Update">
+        </form>        
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.signup-login {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #8a8a8a;
+}
+
+.line {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.field b {
+    font-style: normal;
+    font-size: 14px;
+    color: #555;
+}
+.field-ac {
+    display: flex;
+    flex-direction:row;
+    gap: 5px;
+    font-size: 15px;
+}
+
+.inp {
+    height: 40px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.inp:focus {
+    border: 1px solid #4CAF50;
+}
+
+.submit-button {
+    height: 45px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #45A049;
+}
+
+.anc {
+    color: #1a0dab; /* Default color for the link */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.anc:hover {
+    color: darkorange; /* Color on hover */
+    text-decoration: underline;
+}

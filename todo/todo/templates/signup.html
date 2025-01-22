@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <!-- Corrected static file reference -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    
+    <!-- Google Fonts (fixed URL) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:wght@400;508;700&display=swap" />
+    
+    <!-- Font Awesome (fixed URL) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    
+    <!-- FontAwesome JS kit -->
+    <script src="https://kit.fontawesome.com/cb792c0850.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+   
+    <div class="signup-login">
+        <div class="signup-box">
+            <form method="post">
+                {% csrf_token %}
+                <div class="heading">
+                    Signup
+                </div>
+                <hr>
+                <div class="line">
+                    <div class="field">
+                        <b>Username</b>
+                        <input type="text" class="inp" name="uname" placeholder="Enter Username.." required>
+                    </div>
+                    <div class="field">
+                        <b>Email</b>
+                        <input type="email" class="inp" name="email" placeholder="Enter Email ID.." required>
+                    </div>
+                    <div class="field">
+                        <b>Password</b>
+                        <input type="password" class="inp" name="password" placeholder="Enter Password.." required>
+                    </div>
+                    <div class="field">
+                        <input type="submit" class="submit-button" name="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+            <div class="field-ac">
+                Already have an account<b><a href="/login" class="anc">login</a></b>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

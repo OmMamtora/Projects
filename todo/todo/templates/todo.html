@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/todo.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:wght@400;508;700&display=swap">
+</head>
+<body>
+    <div class="info">
+        <h1>Hello {{ user }}</h1>
+    
+        <a href="{% url 'logout' %}">
+            <img src="{% static 'icons/right-from-bracket-solid.svg' %}" alt="Logout" class="icon">
+        </a>
+    </div>
+
+    <!-- Display Messages Here -->
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <div class="task-to-do">
+        <div class="heading">Get Things Done?</div>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" class="inp" name="title" placeholder="Any Today's Task?" required>
+            <input type="submit" class="submit-button" value="Submit">
+        </form>
+        {% for todo in res %}
+        <div class="todo">
+            <p>{{ todo.title }}</p>
+            <div class="edit">
+                <a href="/edit_todo/{{todo.srno}}"><img src="{% static 'icons/pen-to-square-solid.svg' %}" alt="Edit" class="icon"></a>
+                <a href="/delete_todo/{{todo.srno}}"><img src="{% static 'icons/trash-solid.svg' %}" alt="Delete" class="icon"></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
