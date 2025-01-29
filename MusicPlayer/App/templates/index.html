@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const audio = document.getElementById('fc-media');
+            const lyricsContainer = document.getElementById('song-lyrics');
+            let currentLyricsIndex = 0;
+
+            try {
+                const lyricsData = JSON.parse(lyricsContainer.getAttribute('data-lyrics'));
+                console.log("Raw data-lyrics:", lyricsContainer.getAttribute('data-lyrics'));
+                console.log("Parsed Lyrics Data:", lyricsData);
+
+            } catch (error) {
+                console.error('Error parsing lyrics data:', error);
+                lyricsContainer.innerText = 'Lyrics not available.';
+                return;
+            }
+
+            audio.addEventListener('timeupdate', function () {
+                const currentTime = audio.currentTime;
+                console.log('Audio Current Time:', currentTime); // Debugging
+
+                while (
+                    currentLyricsIndex < lyricsData.length - 1 &&
+                    currentTime >= timeToSecond(lyricsData[currentLyricsIndex + 1].time)
+                ) {
+                    currentLyricsIndex++;
+                }
+
+                if (lyricsData.length > 0) {
+                    console.log('Current Lyrics:', lyricsData[currentLyricsIndex]?.lyrics); // Debugging
+                    lyricsContainer.innerText = lyricsData[currentLyricsIndex]?.lyrics || 'No lyrics found';
+                }
+            });
+
+            function timeToSecond(time) {
+                const [minutes, seconds] = time.split(':').map(parseFloat);
+                return minutes * 60 + seconds;
+            }
+        });
+
+    </script>
+</head>
+<body>
+    {% include "main.html" %}
+    <div class="music-player">
+        {% for items in page_object %}
+            <div class="cover">
+                <img src="{{ items.image.url }}">
+            </div>
+            <div class="title">
+                <h3>{{ items.artist }}</h3>
+                <h3>{{ items.title }}</h3>
+            </div>
+            <center>
+                <a href="{% if page_object.has_previous %}?page={{ page_object.previous_page_number }}{% endif %}">
+                    <i class="fa fa-step-backward fa-2x"></i>
+                </a>&nbsp; &nbsp; &nbsp;
+
+                <a href="{% if page_object.has_next %}?page={{ page_object.next_page_number }}{% endif %}">
+                    <i class="fa fa-step-forward fa-2x"></i>
+                </a>
+            </center>
+            <div class="links">
+                <audio id="fc-media" style="width: 100%;" controls>
+                    {% if items.audio_file %}
+                        <source src="{{ items.audio_file.url }}" type="audio/mp3">
+                    {% else %}
+                        <source src="{{ items.audio_link }}" type="audio/mp3">
+                    {% endif %}
+                </audio>
+                
+            </div>
+
+        {% endfor %}
+    </div>
+</body>
+</html>
