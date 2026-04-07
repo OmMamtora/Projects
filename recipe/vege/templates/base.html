@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page}}</title>
+    
+    <style>
+      
+    /* Styling for the search form container */
+    .search-container {
+        max-width: 500px; 
+        margin: 0 auto; /* Centers the form */
+        padding: 20px;
+    }
+
+    /* Styling the search input field */
+    #search {
+        width: 100%;  /* Full width input */
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-bottom: 15px; /* Adds space below the input */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling the search button */
+    .btn-search {
+        width: 100%;  /* Makes button full-width */
+        padding: 12px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-search:hover {
+        background-color: #0056b3;
+    }
+
+    /* Styling the Add Recipe form and Recipe Table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f8f9fa;
+        color: #343a40;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    td {
+        color: #495057;
+        background-color: #ffffff;
+    }
+
+    /* Styling for the image column in table */
+    td img {
+        max-width: 100px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    /* Styling for the action buttons in the table */
+    .btn-danger, .btn-success {
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    .btn-danger:hover {
+        background-color: #d45652;
+    }
+
+    .btn-success:hover {
+        background-color: #28a745;
+    }
+
+        .card {
+            margin-top: 50px;
+            padding: 20px;
+        }
+    
+        .alert-danger {
+            margin-bottom: 15px;
+        }
+    
+        .form-control {
+            margin-bottom: 15px;
+        }
+    
+        .btn-block {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+    
+        .btn-block:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+     
+    <nav class="navbar dark p-3 bg-primary shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="color: white;">Recipes</a>
+            <from class="d-flex" role="search">
+                {% if request.user.is_authenticated %}
+                    <a href="/logout/" class="btn btn-success" type="submit">Logout</a>
+                {% else %}
+                    <a href="/login/" class="btn btn-success" type="submit">Login</a>
+                {% endif %}
+            </from>
+        </div>
+    </nav>
+
+    {% block start %}
+
+    {% endblock %}
+    
+</body>
+</html>
